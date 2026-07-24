@@ -1,0 +1,31 @@
+text,label,domain
+"The course content was clear and well organised.",Positive,Course Satisfaction
+"The instructor explained difficult concepts very effectively.",Positive,Instructor Effectiveness
+"The learning resources were useful and easy to understand.",Positive,Learning Resource Usefulness
+"The assignments improved my practical understanding.",Positive,Learning Resource Usefulness
+"The feedback was timely and helped me improve.",Positive,Instructor Effectiveness
+"The lectures were engaging and supported the learning outcomes.",Positive,Course Satisfaction
+"The examples made the topic easier to understand.",Positive,Learning Resource Usefulness
+"The course structure supported steady learning progress.",Positive,Course Satisfaction
+"The instructor responded clearly to student questions.",Positive,Instructor Effectiveness
+"The quizzes were fair and aligned with the taught material.",Positive,Course Satisfaction
+"The course contained lectures, quizzes, and assignments.",Neutral,Course Satisfaction
+"The instructor uploaded the weekly material on the portal.",Neutral,Instructor Effectiveness
+"The module included both theory and practical sessions.",Neutral,Course Satisfaction
+"The assessment consisted of a test and a project.",Neutral,Course Satisfaction
+"The learning resources were available in several formats.",Neutral,Learning Resource Usefulness
+"The class met according to the published timetable.",Neutral,Course Satisfaction
+"The course covered the topics listed in the syllabus.",Neutral,Course Satisfaction
+"The instructor provided slides after each lecture.",Neutral,Instructor Effectiveness
+"The assignment deadline was displayed on the LMS.",Neutral,Learning Resource Usefulness
+"The course included recorded and live sessions.",Neutral,Course Satisfaction
+"The course content was confusing and poorly organised.",Negative,Course Satisfaction
+"The instructor did not explain difficult concepts clearly.",Negative,Instructor Effectiveness
+"The learning resources were outdated and not useful.",Negative,Learning Resource Usefulness
+"The assignments were unclear and lacked proper guidance.",Negative,Learning Resource Usefulness
+"The feedback arrived too late to help me improve.",Negative,Instructor Effectiveness
+"The lectures were difficult to follow and not engaging.",Negative,Course Satisfaction
+"The quizzes did not match the material taught in class.",Negative,Course Satisfaction
+"The examples were insufficient for understanding the topic.",Negative,Learning Resource Usefulness
+"The course structure made learning unnecessarily difficult.",Negative,Course Satisfaction
+"The instructor did not respond adequately to questions.",Negative,Instructor Effectiveness
