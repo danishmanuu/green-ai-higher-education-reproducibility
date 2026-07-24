@@ -223,7 +223,13 @@ def macro_roc(
         )
 
     mean_tpr /= 3
-    area = float(np.trapz(mean_tpr, common_fpr))
+    area = float(
+    np.sum(
+        (common_fpr[1:] - common_fpr[:-1])
+        * (mean_tpr[1:] + mean_tpr[:-1])
+        / 2
+    )
+)
     return common_fpr, mean_tpr, area
 
 
