@@ -1,0 +1,8 @@
+{
+  "repository_name": "green-ai-higher-education-reproducibility",
+  "contains_synthetic_120k_dataset": true,
+  "dataset_claim": "Synthetic dataset for workflow verification only, not original LMS data.",
+  "fast_github_actions_dataset": "data/sample_feedback.csv",
+  "large_synthetic_dataset": "data/synthetic_educational_feedback_120k.csv",
+  "recommended_public_claim": "Code and synthetic workflow dataset are public; original LMS data are restricted."
+}
