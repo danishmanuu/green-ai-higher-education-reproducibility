@@ -1,0 +1,55 @@
+name: Reproducibility Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  baseline-and-figures:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install lightweight dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-ci.txt
+
+      - name: Run five-seed logistic-regression baseline
+        run: |
+          python train_baselines.py \
+            --data data/sample_feedback.csv \
+            --models logistic_regression \
+            --seeds 42 52 62 72 82 \
+            --output_dir results/baselines
+
+      - name: Generate statistical tables and figures
+        run: |
+          python evaluate_predictions.py \
+            --input_dir results \
+            --output_dir reports \
+            --figure_seed 42
+
+      - name: Verify expected outputs
+        run: |
+          test -f reports/performance_per_run.csv
+          test -f reports/performance_summary_mean_sd_ci.csv
+          test -f reports/normalised_confusion_matrices.png
+          test -f reports/macro_average_roc_curves.png
+          test -f reports/macro_average_pr_curves.png
+
+      - name: Upload verification outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: reproducibility-check-results
+          path: |
+            results/
+            reports/
